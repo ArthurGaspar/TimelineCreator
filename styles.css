@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input {
+    flex: 1 1 100px;
+}
+
+.form-group textarea {
+    flex: 2 1 200px;
+    min-height: 60px;
+}
+
+.form-group select {
+    flex: 1 1 120px;
+}
+
+button {
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1 1 100px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#monthInput {
+    flex: 1 1 120px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#dayInput {
+    flex: 1 1 60px;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-group label {
+    font-weight: bold;
+}
+
+.filter-group select {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.event {
+    padding: 15px;
+    border-left: 4px solid #4CAF50;
+    background: #f9f9f9;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+}
+
+.event-date {
+    font-style: italic;
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.event::before {
+    content: attr(data-year);
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4CAF50;
+    color: white;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.event h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.event p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+.event .category {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.event-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 4px 8px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #2196F3;
+    color: white;
+    border: none;
+}
+
+.edit-btn:hover {
+    background: #0b7dda;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+}
+
+.delete-btn:hover {
+    background: #da190b;
+}
+
+.Science { border-left-color: #2196F3; }
+.Politics { border-left-color: #FF9800; }
+.War { border-left-color: #F44336; }
+.Art { border-left-color: #9C27B0; }
+.Other { border-left-color: #607D8B; }
+
+.Science::before { background: #2196F3; }
+.Politics::before { background: #FF9800; }
+.War::before { background: #F44336; }
+.Art::before { background: #9C27B0; }
+.Other::before { background: #607D8B; }
